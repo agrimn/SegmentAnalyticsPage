@@ -59,6 +59,23 @@
 		  name: 'Michael Bolton',
 		  email: 'mbolton@initech.com'
 	  });
+	function ProductAdded() {
+		analytics.track('Product Added', {
+		  cart_id: 'skdjsidjsdkdj29j',
+		  product_id: '507f1f77bcf86cd799439011',
+		  sku: 'G-32',
+		  category: 'Games',
+		  name: 'Monopoly: 3rd Edition',
+		  brand: 'Hasbro',
+		  variant: '200 pieces',
+		  price: 18.99,
+		  quantity: 1,
+		  coupon: 'MAYDEALS',
+		  position: 3,
+		  url: 'https://www.company.com/product/path',
+		  image_url: 'https://www.company.com/product/path.jpg'
+		});
+	}
 	function ProductAddedToWishlist() {
 		analytics.track('Product Added to Wishlist', {
 			wishlist_id: 'skdjsidjsdkdj29j',
@@ -247,7 +264,8 @@
 		<div class="logo"><img src="https://branch.io/img/logo_white.png" alt="BranchMetrics" title="Branch Metrics" /></div>
 	</div>
 	<div id="main_container"> 
-		<p> This is a test page!</p>Product Added
+		<p> This is a test page!</p>
+		<button type="button" onclick="ProductAdded()">Product Added</button>
 		<button type="button" onclick="ProductAddedToWishlist()">Product Added to Wishlist</button>
 		<button type="button" onclick="CartViewed()">Cart Viewed</button>
 		<button type="button" onclick="PaymentInfoEntered()">Payment Info Entered</button>
